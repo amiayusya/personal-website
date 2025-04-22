@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creations | Ami Ayusya</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Dyah Laksmi Ayusya</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html">My Roots</a></li>
+          <li class="nav-item"><a class="nav-link active" href="portfolio.html">Creations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Reach Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container py-5">
+    <h2>🎞️ Film Roll Archive</h2>
+    <p>Memories are film stills — some in motion, some paused. Here's how I’ve captured beauty across four homes I've lived and loved.</p>
+
+    <!-- Indonesia -->
+    <section class="mb-5">
+      <h3>🇮🇩 Indonesia</h3>
+        <div class="film-roll">
+            <img src="images/Indonesia/i1.JPEG" alt="Indonesia 1">
+            <img src="images/Indonesia/i2.JPEG" alt="Indonesia 2">
+            <img src="images/Indonesia/i3.JPEG" alt="Indonesia 3">
+            <img src="images/Indonesia/i4.JPEG" alt="Indonesia 4">
+            <img src="images/Indonesia/i5.JPEG" alt="Indonesia 5">
+            <img src="images/Indonesia/i6.jpg" alt="Indonesia 6">
+            <img src="images/Indonesia/i7.jpg" alt="Indonesia 7">
+            <img src="images/Indonesia/i8.jpg" alt="Indonesia 8">
+      </div>
+    </section>
+
+    <!-- Ireland -->
+    <section class="mb-5">
+      <h3>🇮🇪 Ireland</h3>
+      <div class="film-roll">
+        <img src="images/Ireland/d1.jpg" alt="Ireland 1">
+        <img src="images/Ireland/d2.JPG" alt="Ireland 2">
+        <img src="images/Ireland/d3.JPG" alt="Ireland 3">
+        <img src="images/Ireland/d4.JPG" alt="Ireland 4">
+        <img src="images/Ireland/d5.jpg" alt="Ireland 5">
+        <img src="images/Ireland/d6.JPG" alt="Ireland 6">
+        <img src="images/Ireland/d7.jpg" alt="Ireland 7">
+        <img src="images/Ireland/d8.JPG" alt="Ireland 8">
+      </div>
+    </section>
+
+    <!-- DC -->
+    <section class="mb-5">
+      <h3>🇺🇸 Washington, DC</h3>
+      <div class="film-roll">
+        <img src="images/DC/w1.JPG" alt="DC 1">
+        <img src="images/DC/w2.JPG" alt="DC 2">
+        <img src="images/DC/w3.JPG" alt="DC 3">
+        <img src="images/DC/w4.JPG" alt="DC 4">
+        <img src="images/DC/w5.JPG" alt="DC 5">
+        <img src="images/DC/w6.jpg" alt="DC 6">
+        <img src="images/DC/w7.JPG" alt="DC 7">
+        <IMG src="images/DC/w8.jpg" alt="DC 8">
+      </div>
+    </section>
+
+    <!-- Japan -->
+    <section class="mb-5">
+      <h3>🇯🇵 Japan</h3>
+      <div class="film-roll">
+        <img src="images/Japan/j1.JPG" alt="Japan 1">
+        <img src="images/Japan/j2.JPG" alt="Japan 2">
+        <img src="images/Japan/j3.JPG" alt="Japan 3">
+        <img src="images/Japan/j4.JPG" alt="Japan 4">
+        <img src="images/Japan/j5.JPG" alt="Japan 5">
+        <img src="images/Japan/j6.JPG" alt="Japan 6">
+        <img src="images/Japan/j7.jpg" alt="Japan 7">
+        <img src="images/Japan/j8.jpg" alt="Japan 8">
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 mt-5 border-top">
+    <small>© 2025 Ayusya | Footsteps, frames, and film rolls</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <audio id="bg-music" loop>
+    <source src="audio/05 Solo.mp3" type="audio/mp3">
+  </audio>
+  
+  <button id="music-toggle" class="btn btn-light position-fixed bottom-0 end-0 m-3 shadow-sm" style="z-index: 1000;">
+    🔈 Music On
+  </button>
+  
+  <script>
+    const music = document.getElementById('bg-music');
+    const toggle = document.getElementById('music-toggle');
+    let playing = false;
+  
+    // Restore music state
+    if (localStorage.getItem('musicPlaying') === 'true') {
+      music.volume = 0.8;
+      music.play().then(() => {
+        toggle.innerText = '🔇 Music Off';
+        playing = true;
+      }).catch(e => console.log("Autoplay blocked:", e));
+    }
+  
+    toggle.addEventListener('click', () => {
+      if (!playing) {
+        music.play();
+        toggle.innerText = '🔇 Music Off';
+        localStorage.setItem('musicPlaying', 'true');
+      } else {
+        music.pause();
+        toggle.innerText = '🔈 Music On';
+        localStorage.setItem('musicPlaying', 'false');
+      }
+      playing = !playing;
+    });
+  </script>
+</body>
+</html>

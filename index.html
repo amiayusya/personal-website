@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dyah Laksmi Ayusya</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Lightbox2 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Carousel Header -->
+  <header>
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="images/Sliding 1.JPEG" class="d-block w-100" alt="Slide 1"></div>
+        <div class="carousel-item"><img src="images/Sliding 2.JPEG" class="d-block w-100" alt="Slide 2"></div>
+        <div class="carousel-item"><img src="images/Sliding 3.JPEG" class="d-block w-100" alt="Slide 3"></div>
+        <div class="carousel-item"><img src="images/Sliding 4.JPG" class="d-block w-100" alt="Slide 4"></div>
+        <div class="carousel-item"><img src="images/Sliding 5.JPEG" class="d-block w-100" alt="Slide 5"></div>
+        <div class="carousel-item"><img src="images/Sliding 6.JPEG" class="d-block w-100" alt="Slide 6"></div>
+        <div class="carousel-item"><img src="images/Sliding 7.JPEG" class="d-block w-100" alt="Slide 7"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Batik banner -->
+  <div class="batik-banner"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Dyah Laksmi Ayusya</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="about.html">My Roots</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Creations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Reach Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container py-5">
+    <!-- Intro Section -->
+    <section class="mb-5">
+        <div class="row align-items-center">
+          <!-- 📝 Text Column -->
+          <!-- 📝 Narrative Text Column -->
+<div class="col-md-6 mb-4 mb-md-0">
+    <h2 class="mb-3" style="font-family: 'Dancing Script', cursive; font-size: 2.2rem;">A Soft Beginning</h2>
+    <p style="font-size: 1.15rem; line-height: 1.8;">
+      I was born in a place where stories are not just told — they are sung, danced, woven, and worn. In the folds of batik and the rhythm of traditional drums, I learned that memory doesn’t always live in words. Sometimes it lives in movement. In silence. In the pause before a performance begins.
+    </p>
+    <p style="font-size: 1.15rem; line-height: 1.8;">
+      As I grew, I carried those stories with me — across oceans, through classrooms, into code, dashboards, and photo frames. What you see here is not a resume. It’s a resting place for fragments. A space to gather what I’ve seen, what I’ve felt, and what I hope to pass on.
+      <p class="signature mt-4">— Ayusya</p>
+      </p>
+    </p>
+  </div>  
+      
+          <!-- 📷 Portrait Column -->
+          <div class="col-md-6 text-center">
+            <img src="images/portrait.jpg" class="img-fluid rounded shadow-sm" alt="Portrait of Ayusya" style="max-width: 350px;">
+          </div>
+        </div>
+      </section>
+      
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 mt-5 border-top">
+    <small>© 2025 Ayusya | Memory, meaning, and a little bit of magic</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+  <audio id="bg-music" loop>
+    <source src="audio/05 Solo.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  
+  </audio>
+  
+  <button id="music-toggle" class="btn btn-light position-fixed bottom-0 end-0 m-3 shadow-sm" style="z-index: 1000;">
+    🔈 Music On
+  </button>
+  
+  <script>
+    const music = document.getElementById('bg-music');
+    const toggle = document.getElementById('music-toggle');
+    let playing = false;
+  
+    toggle.addEventListener('click', () => {
+      if (!playing) {
+        music.play();
+        toggle.innerText = '🔇 Music Off';
+      } else {
+        music.pause();
+        toggle.innerText = '🔈 Music On';
+      }
+      playing = !playing;
+    });
+  </script>  
+</body>
+</html>
+
+
+  

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Roots | Ami Ayusya</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Dyah Laksmi Ayusya</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="about.html">My Roots</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Creations</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Reach Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container py-5">
+
+    <h2>My Roots</h2>
+    <p>
+      I grew up surrounded by rhythm — not just of drums and gongs, but of stories passed down in whispers, food served with intention, and hands moving to weave fabric and connection.
+    </p>
+
+    <p>
+        My roots lie in Indonesia, in traditions that taught me how to listen, move, and build. That sense of presence lives in every stage I dance on, every dashboard I craft, and every piece of digital space I shape.
+    </p>
+
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <img src="images/Sliding 3.JPEG" alt="Traditional performance" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h4 class="mt-3 mt-md-0">Performing Arts</h4>
+        <p>
+            I was raised on movement. Saman, Tari Piring, the subtle gestures of storytelling through the body. These performances are more than cultural expressions to me. They are ways of remembering, ways of belonging.
+        <h4>Cultural Exchange</h4>
+        <p>
+            Across time in Ireland, Washington D.C., and beyond, I carry my heritage with me. It isn’t a relic. It’s a way of seeing — of building bridges between tradition and tomorrow with grace and intention.
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center my-5">
+      <img src="images/Sliding 4.JPG" class="img-fluid" style="max-width: 100%; border-top: 3px solid #d4af37; border-bottom: 3px solid #d4af37;">
+    </div>
+
+    <p class="text-center fst-italic">
+      “To move forward, I root deeper. And when I create, I return home.”
+    </p>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-4 mt-5 border-top">
+    <small>© 2025 Ayusya | Built with memory, music, and meaning</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <audio id="bg-music" loop>
+    <source src="audio/05 Solo.mp3" type="audio/mp3">
+  </audio>
+  
+  <button id="music-toggle" class="btn btn-light position-fixed bottom-0 end-0 m-3 shadow-sm" style="z-index: 1000;">
+    🔈 Music On
+  </button>
+  
+  <script>
+    const music = document.getElementById('bg-music');
+    const toggle = document.getElementById('music-toggle');
+    let playing = false;
+  
+    // Restore music state
+    if (localStorage.getItem('musicPlaying') === 'true') {
+      music.volume = 0.8;
+      music.play().then(() => {
+        toggle.innerText = '🔇 Music Off';
+        playing = true;
+      }).catch(e => console.log("Autoplay blocked:", e));
+    }
+  
+    toggle.addEventListener('click', () => {
+      if (!playing) {
+        music.play();
+        toggle.innerText = '🔇 Music Off';
+        localStorage.setItem('musicPlaying', 'true');
+      } else {
+        music.pause();
+        toggle.innerText = '🔈 Music On';
+        localStorage.setItem('musicPlaying', 'false');
+      }
+      playing = !playing;
+    });
+  </script>
+  
+</body>
+</html>

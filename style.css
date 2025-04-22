@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Quicksand:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7efe5;
+    color: #4b3869;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: 'Dancing Script', cursive;
+    color: #a0522d;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }  
+
+a {
+  color: #a0522d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  border-bottom: 3px dashed #d4af37;
+}
+
+nav {
+  background-color: #fbead0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+  font-weight: 600;
+  margin: 0 12px;
+  color: #4b3869 !important;
+}
+
+.navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+main {
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+footer {
+  background-color: #f3e1c6;
+  padding: 20px;
+  text-align: center;
+  color: #4b3869;
+  font-size: 0.9rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+.btn-ethnic {
+  background-color: #a0522d;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.btn-ethnic:hover {
+  background-color: #864024;
+}
+
+/* 🌺 Carousel Image Styling */
+.carousel img {
+  height: 90vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    background-color: rgba(247, 239, 229, 0.85);
+    border-radius: 14px;
+    padding: 1.5rem 2rem;
+    color: #4b3869;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }  
+
+/* 🧿 Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .carousel-caption {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .btn-ethnic {
+    font-size: 0.9rem;
+  }
+}
+
+.batik-banner {
+    background-image: url('images/batik.jpg');
+    background-repeat: repeat-x;
+    background-size: cover;
+    height: 80px;
+    width: 100%;
+    margin-top: -5px;
+    border-top: 3px solid #d4af37;
+    border-bottom: 3px solid #d4af37;
+  }
+  
+  .film-roll {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .film-roll img {
+    height: 180px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+  }
+  
+  .film-roll img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  #music-toggle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.1rem;
+    background-color: #f7efe5;
+    color: #4b3869;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    padding: 6px 12px;
+  }
+
+  .signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    color: #6d4c41;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(109, 76, 65, 0.6); /* optional blinking cursor */
+    width: 0;
+    animation: signatureDraw 3s steps(20, end) forwards, blink 0.75s step-end infinite;
+  }
+  
+  @keyframes signatureDraw {
+    to {
+      width: 9ch; /* adjust this based on your signature length */
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
